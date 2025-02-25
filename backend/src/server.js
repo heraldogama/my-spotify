@@ -1,8 +1,11 @@
 import app from "./app.js";
 // import { newArtistArray, newSongArray } from "./insertmany.js";
 import { database } from "./config/connection.js";
+import dotenv from "dotenv";
 
-const PORT = 3001;
+dotenv.config();
+
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
   res.send("root");
