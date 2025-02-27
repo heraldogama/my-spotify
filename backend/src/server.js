@@ -7,7 +7,7 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("root");
 });
 app.get("/artists", async (req, res) => {
